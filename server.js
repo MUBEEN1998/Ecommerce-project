@@ -1,12 +1,12 @@
 import express from "express";
 import colors from "colors";
 import dotenv from 'dotenv';
-import Connectdb from "./config/db.js";
+import Connectdb from "./backend/config/db.js";
 import morgan from "morgan";
-import authrouter from './routes/authrouter.js'
-import { loginController, testcontrolar } from "./controllers/authcontrol.js";
-import categoryRouts from './routes/categoryRouts.js'
-import productRoute from './routes/productRoute.js'
+import authrouter from './backend/routes/authrouter.js'
+import { loginController, testcontrolar } from "./backend/controllers/authcontrol.js";
+import categoryRouts from './backend/routes/categoryRouts.js'
+import productRoute from './backend/routes/productRoute.js'
 import cors from "cors";
 import path from 'path';
 
