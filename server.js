@@ -45,9 +45,9 @@ app.use("/api/v1/products",productRoute)
 app.use("/app/v1/auth",loginController);
 app.use("/app/v1/auth",testcontrolar)
 
-const currentFileUrl = new URL(import.meta.url);
-const currentDir = path.dirname(currentFileUrl.pathname);
-app.use(express.static(path.join(currentDir, 'online-shopping/build')));
+// const currentFileUrl = new URL(import.meta.url);
+// const currentDir = path.dirname(currentFileUrl.pathname);
+// app.use(express.static(path.join(currentDir, 'online-shopping/build')));
 
 // rest api
 app.get('/',(req,res)=>{
