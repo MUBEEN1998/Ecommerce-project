@@ -45,12 +45,11 @@ app.use("/api/v1/products",productRoute)
 app.use("/app/v1/auth",loginController);
 app.use("/app/v1/auth",testcontrolar)
 
+const currentFileUrl = new URL(import.meta.url);
+const currentDir = path.dirname(currentFileUrl.pathname);
+app.use(express.static(path.join(currentDir, 'online-shopping/build')));
 
-// app.use('*', function(req,res) {
-//     res.sendFile(path.join(__dirname, './online-shopping/build'))
-// })
-// app.use(express.static(path.join(__dirname, './online-shopping/build')))
-//rest api
+// rest api
 app.get('/',(req,res)=>{
     res.send(
        "<h1> message : welcome to mubeen app </h1>"
