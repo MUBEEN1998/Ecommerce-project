@@ -9,7 +9,7 @@ import categoryRouts from './backend/routes/categoryRouts.js'
 import productRoute from './backend/routes/productRoute.js'
 import cors from "cors";
 import path from 'path';
-
+import { fileURLToPath } from "url";
 
 
 //configure env
@@ -19,7 +19,9 @@ dotenv.config()
 Connectdb();
 
 //
-
+//module fix
+const __filename=fileURLToPath(import.meta.url)
+const __dirname=path.dirname(__filename);
 
 // const { bgCyan } = require('colors')
 // const express =require('express')
@@ -47,14 +49,18 @@ app.use("/app/v1/auth",testcontrolar)
 
 // const currentFileUrl = new URL(import.meta.url);
 // const currentDir = path.dirname(currentFileUrl.pathname);
-// app.use(express.static(path.join(currentDir, 'online-shopping/build')));
+app.use(express.static(path.join(__dirname, 'online-shopping/build')));
 
 // rest api
-app.get('/',(req,res)=>{
-    res.send(
-       "<h1> message : welcome to mubeen app </h1>"
-)
+
+app.use('*',function(req,res){
+    res.sendFile(path.join(__dirname,'./online-shopping/build/index.html'))
 })
+// app.get('/',(req,res)=>{
+//     res.send(
+//        "<h1> message : welcome to mubeen app </h1>"
+// )
+// })
 
 //port
 const PORT=process.env.PORT ;
