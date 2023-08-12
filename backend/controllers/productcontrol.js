@@ -10,9 +10,9 @@ dotenv.config()
 //====================Payment gatway=========================
 var gateway = new braintree.BraintreeGateway({
   environment: braintree.Environment.Sandbox,
-  merchantId: process.env.MerchantId,
-  publicKey: process.env.PublicKey,
-  privateKey: process.env.PrivateKey,
+  merchantId: process.env.MERCHANT_ID,
+  publicKey: process.env.PUBLIC_KEY,
+  privateKey: process.env.PRIVATE_KEY,
 });
 
 
