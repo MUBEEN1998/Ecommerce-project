@@ -49,7 +49,7 @@ app.use("/app/v1/auth",testcontrolar)
 
 // const currentFileUrl = new URL(import.meta.url);
 // const currentDir = path.dirname(currentFileUrl.pathname);
-app.use(express.static(path.join(__dirname, 'online-shopping/build')));
+// app.use(express.static(path.join(__dirname, 'online-shopping/build')));
 
 // rest api
 
