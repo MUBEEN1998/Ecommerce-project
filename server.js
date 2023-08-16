@@ -30,11 +30,9 @@ const __dirname =path.dirname(__filename);
 const app = express();
 app.use(express.json({limit:'35mb'}));
 app.use(morgan('dev'));
+app.use(express.static(path.join(__dirname, 'online-shopping/build')));
 
-app.use(cors({
-    origin: "*",
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
-}))
+
 
 //======================register post=========================
 app.use("/api/v1/auth",authrouter);
@@ -49,13 +47,18 @@ app.use("/app/v1/auth",testcontrolar)
 
 // const currentFileUrl = new URL(import.meta.url);
 // const currentDir = path.dirname(currentFileUrl.pathname);
-// app.use(express.static(path.join(__dirname, 'online-shopping/build')));
 
 // rest api
 
-app.use('*',function(req,res){
-    res.sendFile(path.join(__dirname,'./online-shopping/build/index.html'))
-})
+app.use('*', function(req, res) {
+    try {
+        res.sendFile(path.join(__dirname, './online-shopping/build/index.html'));
+    } catch (error) {
+        console.error('Error sending file:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
 // app.get('/',(req,res)=>{
 //     res.send(
 //        "<h1> message : welcome to mubeen app </h1>"
