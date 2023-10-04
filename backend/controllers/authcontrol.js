@@ -7,25 +7,25 @@ export const registercontroller =  async(req,res) => {
     try{
         const {name,email,password,phone,address,answer}=req.body 
         if(!name){
-            res.send({error:'name is not required'})
+            res.send({error:'name is  required'})
         }
 
         if(!email){
-            res.send({error:'email is not requiered'})
+            res.send({error:'email is  requiered'})
         }
         if(!password){
-            res.send({error:'password  is not required'})
+            res.send({error:'password  is  required'})
         }
         if(!phone){
-            res.send({error:'phone  is not required'})
+            res.send({error:'phone  is  required'})
         }
 
         if(!address){
-            res.send({error:'address  is not required'})
+            res.send({error:'address  is  required'})
         }
 
         if(!answer){
-          res.send({error:'answer  is not required'})
+          res.send({error:'answer  is  required'})
       }
 
         const existinguser = await usermodel.findOne({email})

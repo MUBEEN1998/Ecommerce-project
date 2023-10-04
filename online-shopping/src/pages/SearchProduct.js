@@ -8,11 +8,11 @@ const SearchProduct = () => {
   return (
     
 <Layout>
-    <div className=' mt-24 '>
+    <div className=' mt-32 '>
 
   <div className="text-center">
-    <h1 className="text-4xl font-bold">Search Results</h1>
-    <h6>
+    <h1 className="text-4xl text-gray-600 font-bold  ">Search Results</h1>
+    <h6 className='mt-8 text-gray-600 text-4xl font-bold '>
       {values?.results.length < 1
       ? "No Products Found"
       : `Found ${values?.results.length}`}
