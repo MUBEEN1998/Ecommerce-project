@@ -34,9 +34,9 @@ const ProductDetails = () => {
   return (
     <Layout>
     <div className='mt-20'>
-            <div className='w-full grid grid-cols-1 md:grid-cols-2 p-4   h-[50vh]'>
+            <div className='w-full grid grid-cols-1 md:grid-cols-2 p-4   h-[70vh]'>
                     <div className='w-full '>
-                        <img className='m-auto h-1/2' src={`/api/v1/products/product-photo/${products._id}`}/>
+                        <img className='m-auto w-[60%] h-[60%]' src={`/api/v1/products/product-photo/${products._id}`}/>
                     </div>
                     <div className='w-full  py-4 h-4/5  '>
                     <h1 className='text-red-600 text-2xl font-bold '>PRODUCTS DETAILS</h1>
@@ -54,9 +54,9 @@ const ProductDetails = () => {
                     
             </div>  
 
-            <div className='w-full '>
+            <div className='w-[80%] m-auto  '>
                 
-            <span className=''><h1 className='text-2xl bg-gray-200   '>Similar Products</h1>
+            <span className=''><h1 className='text-3xl px-4 text-red-600 font-bold   '>Similar Products</h1>
             {similarproduct.length <1 &&(<h6 className='text-center'>No similar projects</h6>)}
            </span>
            
@@ -73,7 +73,7 @@ return (
   //   className="product-link">
 
     <div className="w-[80%] pb-4 divide-slate-200 border-2 rounded bg-white overflow-hidden shadow-lg hover:shadow-2xl ease-in duration-200 ease-out duration-200 " key={c._id}>
-      <img className="w-1/2 m-auto h-[250px] " src={`/api/v1/products/product-photo/${c._id}`} alt="Sunset in the mountains" />
+      <img className="w-[90%] m-auto h-[60%] " src={`/api/v1/products/product-photo/${c._id}`} alt="Sunset in the mountains" />
       <div className="pt-4 px-2">
         <p className=" text-gray-400 text-start text-[18px] text-base">
         {c.name}
@@ -85,11 +85,11 @@ return (
       text-green-600 px-2 text-[12px]'>80% off</span>
       </div>
       <div className=" text-[14px] px-2 flex gap-4 px-auto ">
-      <button class=" w-auto bg-red-600  text-white font-bold py-2 px-2 " >
+      <button class=" w-auto bg-red-600 text-[12px]  text-white font-bold py-1 px-4 " >
   More Details
   </button>
-  <button class=" w-auto bg-yellow-600 text-white font-bold py-2 px-2 ">
-  ADD TO CART
+  <button class=" w-auto bg-yellow-600 text-white font-bold py-1 px-2 ">
+  Add To Cart
   </button>
       </div>
       

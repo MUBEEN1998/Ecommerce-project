@@ -42,8 +42,8 @@ const Header = () => {
   const [open, setOpen] = useState(false)
   return (
     <>
-      <div className='w-full bg-[#8B0000] text-white fixed top-0 z-index-1 left-0'>
-        <div className='md:flex items-center justify-between bg-[#8B0000] ot-4 md:px-5 px-7 pt-2 '>
+      <div className='w-full bg-[#1569C7] text-white fixed top-0 z-index-1 left-0'>
+        <div className='md:flex items-center justify-between bg-[#1569C7] ot-4 md:px-5 px-7 pt-2 '>
           <div className='gap-2 flex'>
             <GiShoppingCart size={20} /> <p> Shopping</p>
           </div>
@@ -53,7 +53,7 @@ const Header = () => {
 
 
           <ul className={`md:flex md:items-center text-white md:pb-0 pb-14 pt-5 md:pt-0 pl-5 md:pl-0 absolute md:static 
-      bg-[#8B0000] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-0 duration-500 ease-in ${open ? 'top-[-200px]' : 'top-[30px]'} `}>
+      bg-[#1569C7] md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-0 duration-500 ease-in ${open ? 'top-[-200px]' : 'top-[30px]'} `}>
             <div className='w-auto md:w-[400px]'><Searchform/></div>
             {menu.map((item, index) => {
               return (

@@ -13,7 +13,7 @@ const Register = () => {
   const [address, setAddress] = useState('');
   const [password, setPassword] = useState('');
   const [answer, setAnswer] = useState('');
-  const links="https://a.rgbimg.com/users/g/gr/gramps/300/mZOobZm.jpg"
+  const links="https://static.vecteezy.com/system/resources/previews/004/299/830/non_2x/shopping-online-on-phone-with-podium-paper-art-modern-pink-background-gifts-box-illustration-free-vector.jpg"
   const navigate = useNavigate();
 
   const handlesubmit = async (e) => {
@@ -42,16 +42,16 @@ const Register = () => {
   return (
     <>
     <Layout>
-    <div className='bg-gray-300 py-4' style={{ backgroundImage:` url(${links})` }}>
-    <section className="bg-gray-50 dark:bg-gray-900">
-  <div className="flex flex-col items-center justify-center px-6 py-4 mx-auto md:h-screen lg:py-0">
+    <div className=' py-4' style={{ backgroundImage:` url(${links})`, backgroundSize:"cover" }}>
+    <section className=" dark:bg-gray-900">
+  <div className="flex flex-col items-center justify-center px-6 py-2 mx-auto md:h-screen lg:py-0">
     
     <div className="w-full mt-20 bg-white rounded-lg shadow dark:border hover:shadow-xl md:mt-0 sm:max-w-md xl:p-0 dark:bg-red-900 dark:border-red-400">
-      <div className="p-4 space-y-2 md:space-y-6 sm:p-6">
+      <div className="p-4  sm:p-4">
         <h1 className="text-xl font-bold leading-tight  text-red-900 md:text-2xl dark:text-white">
           CREATE ACCOUNT
         </h1>
-        <form className="space-y-2 md:space-y-4" onSubmit={handlesubmit} action="#">
+        <form className="space-y-2 md:space-y-2" onSubmit={handlesubmit} action="#">
           <div>
             <input type="text" name="name" 
             onChange={(e)=>setName(e.target.value)}

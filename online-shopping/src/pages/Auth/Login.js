@@ -10,6 +10,7 @@ const Login = () => {
   const [auth,setAuth]=useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const bgimage="https://img.freepik.com/free-photo/arrangement-black-friday-shopping-carts-with-copy-space_23-2148667047.jpg?w=996&t=st=1700297561~exp=1700298161~hmac=d2459c8e968364e70b2886f65078b9933dc7b41e44464c7d27af9bc4766efdb5"
 
   const handlesubmit = async (e) => {
     e.preventDefault();
@@ -42,9 +43,9 @@ const Login = () => {
   return (
     <>
     <Layout>
-      <div className='w-full p-4 bg-gray-100  m-auto'>
-            <div className='w-full mt-12 md:mt-0  h-60 '>
-<section className="bg-gray-50 dark:bg-gray-900">
+      <div className='w-full p-4  m-auto' style={{ backgroundImage:`url(${bgimage})`,backgroundSize:"cover"}}>
+          <div className='w-full mt-12 md:mt-0  h-auto '>
+<section className=" " >
   <div className="flex flex-col items-center justify-center  px-6 py-8 mx-auto md:h-screen lg:py-0">
     
     <div className="w-full bg-white rounded-lg shadow dark:border hover:shadow-xl md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
