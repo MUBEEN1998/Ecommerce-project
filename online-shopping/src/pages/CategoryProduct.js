@@ -29,9 +29,9 @@ const CategoryProduct = () => {
 
   return (
     <Layout>
-      <div className="mt-16 category items-center justify-between p-auto  bg-gray-200">
+      <div className="mt-16 category items-center justify-between p-auto  ">
         <h1 className="text-center mt-2 font-bold text-2xl text-red-800 ">{category?.slug}</h1>
-      <div className='p-4 grid  grid-cols-1 gap-2 md:grid-cols-3 '>
+      <div className='p-4 grid  grid-cols-1 gap-2 md:grid-cols-4 '>
       {products?.map((c) => {
 
 return (
@@ -39,7 +39,7 @@ return (
   //   to={`/dashboard/admin/product/${c.slug}`}
   //   className="product-link">
 
-    <div className="w-[60%] p-2 pb-4 rounded bg-white overflow-hidden shadow-lg hover:shadow-2xl ease-in duration-200 ease-out duration-200 " key={c._id}>
+    <div className="w-[80%] p-2 pb-4 rounded bg-white overflow-hidden shadow-lg hover:shadow-2xl ease-in duration-200 ease-out duration-200 " key={c._id}>
       
       <img className="w-full m-auto h-[250px]
        " src={`/api/v1/products/product-photo/${c._id}`} alt="Sunset in the mountains" />
@@ -54,7 +54,7 @@ return (
       text-green-600 px-2 text-[12px]'>80% off</span>
       </div>
       <div className=" text-[14px] px-2 flex gap-4 px-auto ">
-      <button class=" w-auto bg-red-600  text-white rounded font-bold py-2 px-2 " onClick={()=>navigate(`/product-details/${c.slug}`)}>
+      <button class=" w-auto bg-red-600 text-[12px]  text-white rounded font-bold py-1 px-1 " onClick={()=>navigate(`/product-details/${c.slug}`)}>
   More Details
   </button>
   <button class=" w-auto bg-yellow-600 text-[14px ] rounded text-white font-bold py-2 px-2 " onClick={()=>{setCart([...cart,c]);

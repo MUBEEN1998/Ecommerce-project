@@ -155,8 +155,6 @@ const filterProduct = async () => {
   <main className="flex-1 mt-16 ml-44">
     
     <div className="h-20 ml-8 text-center p-10">
-      <h1 className="text-4xl">All Products</h1>
-      <h1>{radio}</h1>
       {/* <h1>{JSON.stringify(checked,null,4)}</h1> */}
       {products?(
       <div className='grid grid-cols-1 gap-2 md:grid-cols-3 '>

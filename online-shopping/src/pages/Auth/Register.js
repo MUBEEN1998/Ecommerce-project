@@ -13,7 +13,7 @@ const Register = () => {
   const [address, setAddress] = useState('');
   const [password, setPassword] = useState('');
   const [answer, setAnswer] = useState('');
-  const links="https://static.vecteezy.com/system/resources/previews/004/299/830/non_2x/shopping-online-on-phone-with-podium-paper-art-modern-pink-background-gifts-box-illustration-free-vector.jpg"
+  const links="https://img.freepik.com/free-photo/arrangement-black-friday-shopping-carts-with-copy-space_23-2148667047.jpg?w=996&t=st=1700297561~exp=1700298161~hmac=d2459c8e968364e70b2886f65078b9933dc7b41e44464c7d27af9bc4766efdb5"
   const navigate = useNavigate();
 
   const handlesubmit = async (e) => {
@@ -49,7 +49,7 @@ const Register = () => {
     <div className="w-full mt-20 bg-white rounded-lg shadow dark:border hover:shadow-xl md:mt-0 sm:max-w-md xl:p-0 dark:bg-red-900 dark:border-red-400">
       <div className="p-4  sm:p-4">
         <h1 className="text-xl font-bold leading-tight  text-red-900 md:text-2xl dark:text-white">
-          CREATE ACCOUNT
+          Creat Account
         </h1>
         <form className="space-y-2 md:space-y-2" onSubmit={handlesubmit} action="#">
           <div>
@@ -133,7 +133,7 @@ const Register = () => {
            focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2 text-center
             dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Create an account</button>
           <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-            Already have an account? <Link href="/login" className="font-medium text-primary-600 hover:underline
+            Already have an account? <Link to="/login" className="font-medium text-primary-600 hover:underline
              dark:text-primary-500">Login here</Link>
           </p>
         </form>
