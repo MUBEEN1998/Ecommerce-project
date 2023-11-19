@@ -29,7 +29,7 @@ const UserMenu = ({children}) => {
       <div className="fixed w-40 h-[100vh] left-[-1px] top-[65px]  shodow-xl">
         {menu?.map((c,index)=>{
           return(
-         <Link to={c.path}> <div className="w-full p-2 text-start text-gray-600 hover:text-red-800 gap-2 flex " key={index}>
+         <Link to={c.path}> <div className="w-full p-2 text-start text-gray-600 hover:text-[#1569C7] gap-2 flex " key={index}>
           {c.icon}  {c.name}
           </div>
           </Link>
