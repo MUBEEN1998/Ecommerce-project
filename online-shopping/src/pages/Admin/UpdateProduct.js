@@ -160,14 +160,13 @@ const UpdateProduct = () => {
                     </div>
                   </div>
                 ) : (
-                  <div className="text-center justify-items-center ">
-                    <div >
+                  <div className="text-center justify-items-center px-2 ">
+                    <div  style={{width:"200px"}}>
                     <img
                       src={`/api/v1/products/product-photo/${id}`}
                       alt="product_photo"
-                      height={"200px"}
-                      weight={"200px"}
-                      className="img img-responsive"
+                      height={"150px"}
+                      className=""
                     />
                     </div>
                   </div>

@@ -26,7 +26,7 @@ const AdminMenu = ({ children }) => {
       <Header />
       <div className="">
         <motion.div animate={{ width: isopen ? "250px" : "36px" }} className="sidebar top-[114px] transitions-in  shadow-md ">
-          <div className="w-auto flex p-1 gap-2 text-[#8B0000] text-2xl bold ">
+          <div className="w-auto flex p-1 gap-2 text-[#1569C7] text-2xl bold ">
             {isopen ? (
               ""
             ) : (
@@ -43,7 +43,7 @@ const AdminMenu = ({ children }) => {
           </div>
           {menu.map((item, index) => {
             return (
-              <div className="w-full mt-4 p-2 text-black hover:text-[#8B0000]" key={index}>
+              <div className="w-full mt-4 p-2 text-black hover:text-[#1569C7]" key={index}>
                 <Link to={item.path} className="flex gap-2">
                   <p>{item.icon}</p>
                   {isopen ? <p>{item.name}</p> : ""}

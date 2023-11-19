@@ -23,7 +23,7 @@ const Products = () => {
   return (
     <>
       <AdminMenu>
-        <div className='mt-16 p-4 bg-[#F5F5F5] h-[100%]'>
+        <div className='mt-16 p-4  h-[100%]'>
           <div className='m-auto  grid md:grid-cols-4 gap-2  grid-cols-1'>
             {products?.map((c) => {
 
@@ -33,7 +33,7 @@ const Products = () => {
                   className="product-link">
 
                   <div className="w-[80%] rounded bg-white overflow-hidden shadow-lg hover:shadow-2xl ease-in duration-200 ease-out duration-200 " key={c._id}>
-                    <img className="w-4/5 m-auto h-[200px] " src={`/api/v1/products/product-photo/${c._id}`} alt="Sunset in the mountains" />
+                    <img className="w-[95%] m-auto h-[200px] " src={`/api/v1/products/product-photo/${c._id}`} alt="Sunset in the mountains" />
                     <div className="pt-4 px-2">
                       <p className=" text-gray-400 text-[18px] text-base">
                       {c.name}

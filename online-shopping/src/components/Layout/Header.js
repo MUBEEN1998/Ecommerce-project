@@ -79,13 +79,13 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      {drop?<div className=' w-[80px] left-[1000px] fixed top-10 bg-white 
+      {drop?<div className=' w-[80px] left-[850px] fixed top-10 bg-white 
       transition ease-in-out delay-260 rounded shadow-md h-[20]'>
 
         <ul className=''>
           {categorys?.map((item,index)=>{
             return(
-          <li className='p-1 text-[14px] text-gray-400 hover:bg-red-800 hover:text-white' key={index}>
+          <li className='p-1 text-[14px] text-gray-400 hover:bg-[#1569C7] hover:text-white' key={index}>
             <Link to={`/category/${item.slug}`}>{item.name}</Link></li>
 
             )
